@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Migrant World TV / 이주민방송</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <script>
+        // 1. 유투브 iframe 사용해서 추가할 때, 사용하는 스크립트 바디에 삽입시킴 //
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '360',
+                width: '640',
+                videoId: 'M7lc1UVf-VE',
+                playerVars: {
+                    'autoply': 1,
+                    'controls': 0
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        // 4. The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        // 5. The API calls this function when the player's state changes.
+        //    The function indicates that when playing a video (state=1),
+        //    the player should play for six seconds and then stop.
+        var done = false;
+
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING && !done) {
+                setTimeout(stopVideo, 6000);
+                done = true;
+            }
+        }
+
+        function stopVideo() {
+            player.stopVideo();
+        }
+
+    </script>
+
+
+    <div class="wrap">
+        <section id="header">
+            <div class="inner">
+                <div class="up_head">
+                    <div class="logo"><a href="index.html"><img src="img/Logo.png" alt="로고"></a></div>
+                    <ul class="login">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li>
+                            <select>
+                                <option>&nbsp;&nbsp;한국어</option>
+                                <option>&nbsp;&nbsp;English</option>
+                                <option>&nbsp;&nbsp;中 文</option>
+                                <option>&nbsp;&nbsp;日本語</option>
+                                <option>&nbsp;&nbsp;Tiếng Việt</option>
+                                <option>&nbsp;&nbsp;ไทย</option>
+                                <option>&nbsp;&nbsp;Español</option>
+                            </select>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <nav id="nav1" class="navi">
+                   <div class="inner">
+                   <h1 class="hidden">네비게이션</h1>
+                   <ul class="depth1">
+                       <li><a href="#">뉴스VOM</a>
+                           <ul>
+                               <li><a href="#">VOM채널</a></li>
+                               <li><a href="#">VOM채널</a></li>
+                           </ul>
+                       </li>
+                       <li><a href="#">라디오MWFM</a>
+                           <ul>
+                               <li><a href="#">현재방영채널</a></li>
+                               <li><a href="#">이전종영채널</a></li>
+                           </ul>
+                       </li>
+                       <li><a href="#">영화제MWFF</a>
+                           <ul>
+                               <li><a href="#">역대영화제기록</a></li>
+                               <li><a href="#">영화제이야기</a></li>
+                           </ul>
+                       </li>
+                       <li><a href="#">&nbsp;</a></li>
+                       <li><a href="#">단체소개</a>
+                           <ul>
+                               <li><a href="#">비전과 미션</a></li>
+                               <li><a href="#">주요사업</a></li>
+                               <li><a href="#">함께하는 사람들</a></li>
+                               <li><a href="#">주요연혁</a></li>
+                               <li><a href="#">재정보고</a></li>
+                               <li><a href="#">후원안내</a></li>
+                               <li><a href="#">찾아오시는 길</a></li>
+                           </ul>
+                       </li>
+                        <li><a href="#">미디어아카데미</a></li>
+                       <li><a href="#">공지사항</a>
+                           <ul>
+                               <li><a href="#">주요공지사항</a></li>
+                               <li><a href="#">자주하는 질문</a></li>
+                           </ul>
+                       </li>
+                        <li><a href="#"><img src="img/search.png" alt="검색"></a></li>
+                        <li><a href="#"><img src="img/burger.png" alt="전체메뉴"></a></li>
+                   </ul>
+                    </div>
+                </nav>
+                
+            </div>
+        </section>
+
+        <section id="mainimg">
+            <div class="inner">
+                <h1 class="hidden">메인이미지_슬라이드</h1>
+                <div class="mitxt">
+                    <p>#이주민방송#MWTV</p>
+                    <h1>이주민의 미디어센터, 이주민방송<br>차별없는 곧동체</h1>
+                </div>
+                <div class="btn">자세히보기</div>
+                <span><iframe id="player" src="http://www.youtube.com/embed/hPSbCrEgwiY?enablejsapi=1&origin=http://example.com" frameborder="0"></iframe></span>
+            </div>
+        </section>
+
+        <section id="contents">
+            <div class="inner">
+                <div class="001">
+                    <h1 class="hidden">좌우 박스</h1>
+                    <div class="01_left"></div>
+                    <div class="01_right"></div>
+                    <div class="01_btn"></div>
+                </div>
+
+                <div class="vclip01">
+                    <!-- margin top: 30px / margin bottom: 40px -->
+                    <h1 class="hidden">뉴스VOM</h1>
+                    <div class="topsbttl">
+                        <div>
+                            <h2><a href="#">라디오 MWFM</a></h2>
+                        </div>
+                        <div class="lrbtn">
+                            <span><img src="img/lbtn.png" alt="Left button"></span>
+                            <span><img src="img/rbtn.png" alt="Right button"></span>
+                        </div>
+                    </div>
+                    <!-- Padding bottom 20px -->
+                    <div class="slideboxset">
+                        <div class="slidebox">
+                            <h1 class="hidden">슬라이드박스01</h1>
+                            <img src="img/sl001.png" alt="기자회견문">
+                            <!-- padding bottom 2px -->
+                            <div>
+                                <h2 class="sltheme">[기자회견문/성명]</h2>
+                                <p class="sltxt">살해당한 태국 이주여성</p>
+                                <p class="tag">#기자회견문</p>
+                            </div>
+                        </div>
+                        <div class="slidebox">
+                            <h1 class="hidden">슬라이드박스02</h1>
+                            <img src="img/sl002.png" alt="VOM현장">
+                            <!-- padding bottom 2px -->
+                            <div>
+                                <h2 class="sltheme">[VOM현장]</h2>
+                                <p class="sltxt">한국정부는 이주여성 노동자</p>
+                                <p class="tag">#VOM현장</p>
+                            </div>
+                        </div>
+                        <div class="slidebox">
+                            <h1 class="hidden">슬라이드박스03</h1>
+                            <img src="img/sl003.png" alt="커버스토리">
+                            <!-- padding bottom 2px -->
+                            <div>
+                                <h2 class="sltheme">[커버스토리]</h2>
+                                <p class="sltxt">사업장 변경제한- 이주노동자</p>
+                                <p class="tag">#커버스토리</p>
+                            </div>
+                        </div>
+                        <div class="slidebox">
+                            <h1 class="hidden">슬라이드박스04</h1>
+                            <img src="img/sl004.png" alt="VOM인터뷰">
+                            <!-- padding bottom 2px -->
+                            <div>
+                                <h2 class="sltheme">[VOM인터뷰]</h2>
+                                <p class="sltxt">밥 대신 초코파이, 개야도 이주 노동자</p>
+                                <p class="tag">#VOM인터뷰</p>
+                            </div>
+                        </div>
+                        <div class="slidebox">
+                            <h1 class="hidden">슬라이드박스05</h1>
+                            <img src="img/sl005.png" alt="Refugees Voice">
+                            <!-- padding bottom 2px -->
+                            <div>
+                                <h2 class="sltheme">[Refugees Voice]</h2>
+                                <p class="sltxt">The Unremembered Refugees</p>
+                                <p class="tag">#RefugeesVoice</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="vclip02">
+                    <!-- margin top: 30px / margin bottom: 40px -->
+                    <h1 class="hidden">라디오 MWFM</h1>
+                    <div class="topsbttl">
+                        <div>
+                            <h2><a href="#">라디오 MWFM</a></h2>
+                        </div>
+                        <div class="lrbtn">
+                            <span><img src="img/lbtn.png" alt="Left button"></span>
+                            <span><img src="img/rbtn.png" alt="Right button"></span>
+                        </div>
+                    </div>
+                    <!-- Padding bottom 20px -->
+                    <div class="slideboxset">
+                        <div class="slidebox">
+                            <h1 class="hidden">슬라이드박스01</h1>
+                            <img src="img/sl006.png" alt="미얀마수첩">
+                            <!-- padding bottom 2px -->
+                            <div>
+                                <h2 class="sltheme">[당신을위한 미얀마수첩]</h2>
+                                <p class="sltxt">1화. 미얀마? 미얀마가 어디야?</p>
+                                <p class="tag">#MWFM #미얀마</p>
+                            </div>
+                        </div>
+                        <div class="slidebox">
+                            <h1 class="hidden">슬라이드박스02</h1>
+                            <img src="img/sl007.png" alt="The Arab Wave">
+                            <!-- padding bottom 2px -->
+                            <div>
+                                <h2 class="sltheme">[The Arab Wave]</h2>
+                                <p class="sltxt">EP1. You will never walk alone</p>
+                                <p class="tag">#MWFM #Arabwave</p>
+                            </div>
+                        </div>
+                        <div class="slidebox">
+                            <h1 class="hidden">슬라이드박스03</h1>
+                            <img src="img/sl008.png" alt="영등포마을반상회">
+                            <!-- padding bottom 2px -->
+                            <div>
+                                <h2 class="sltheme">[영등포마을반상회]</h2>
+                                <p class="sltxt">5부1화. 이제는 게스트가 MC에요!</p>
+                                <p class="tag">#MWFM #영등포마을반상회</p>
+                            </div>
+                        </div>
+                        <div class="slidebox">
+                            <h1 class="hidden">슬라이드박스04</h1>
+                            <img src="img/sl009.png" alt="MEYOU의 스마일 그림책">
+                            <!-- padding bottom 2px -->
+                            <div>
+                                <h2 class="sltheme">[MEYOU의 스마일그림책]</h2>
+                                <p class="sltxt">35화. 헨젤과 그레텔</p>
+                                <p class="tag">#MWFM #Meyou</p>
+                            </div>
+                        </div>
+                        <div class="slidebox">
+                            <h1 class="hidden">슬라이드박스05</h1>
+                            <img src="img/sl010.png" alt="Refugees Voice">
+                            <!-- padding bottom 2px -->
+                            <div>
+                                <h2 class="sltheme">[착한뉴스]</h2>
+                                <p class="sltxt">25화. 정부의 국제결혼중개업에 관해서</p>
+                                <p class="tag">#MWFM #착한뉴스</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mwffbox">
+                    <h1 class="hidden">이주민영화제</h1>
+                    <div class="topsbttl">
+                        <div>
+                            <h2><a href="#">이주민 영화제 MWFF</a></h2>
+                        </div>
+                        <div>이주민들이 스스로의 삶을 영화로 만들어 선주민과 이주민의 소통의 장을 만듭니다.</div>
+                    </div>
+                    <!-- margin bottom : 20px -->
+                    <div class="boxset">
+                        <div class="bsleft">
+                            <div class="mwfftxt">
+                                <h2>Migrant World Flim<br>Festival</h2>
+                            </div>
+                            <div class="btn">역대 영화제 소개</div>
+                        </div>
+                        <!-- 중간 1px solid 선 margin left / right : 39px -->
+                        <div class="bsright">
+                            <div class="rightup">
+                                <div>
+                                    <h2>제13회 이주민 영화제<br>MWFF</h2>
+                                    <p>2019. 10. 26. (Sat) ~ 10. 27. (Sun)<br>이화여대 아트하우스 모모</p>
+                                </div>
+                                <div class="btn">자세히보기</div>
+                            </div>
+
+                            <div class="rightbtm">
+                                <div>
+                                    <h2>Migrant World Flim<br> Festival</h2>
+                                </div>
+                                <div class="btn">자세히보기</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mwsnews">
+                    <h1 class="hidden">공지사항</h1>
+                    <span>공지사항</span><span>[공지]</span><span>2018년 이주민방송 홈페이지 개편!</span><span>2018. 01. 10.</span>
+                </div>
+
+                <div class="mwacdmy">
+                    <h1 class="hidden">이주민미디어 아카데미</h1>
+                    <div class="topsbttl">
+                        <div>
+                            <h2><a href="#">이주민 미디어 아카데미</a></h2>
+                        </div>
+                    </div>
+                    <!-- margin bottom : 20px -->
+                    <div class="acdmybox">
+                        <div class="acdlbox">
+                            <div>
+                                <h3>이주민 미디어 아카데미</h3>
+                                <h2>영상제작, 라디오 제작,<br>기자단 교육</h2>
+                            </div>
+                        </div>
+                        <div class="acdrbox">
+                            <div class="rboxslide">
+                                <img src="img/0010.png" alt="">
+                                <h2>[기술교육]</h2>
+                                <p>2인 진행자 라이브 진행</p>
+                                <p>#MW미디어아카데미</p>
+                            </div>
+                            <div class="rboxslide">
+                                <img src="img/0011.png" alt="">
+                                <h2>[기술교육]</h2>
+                                <p>2인 진행자 진행 교육</p>
+                                <p>#MW미디어아카데미</p>
+                            </div>
+                            <div class="rboxslide">
+                                <img src="img/0012.png" alt="">
+                                <h2>[기술교육]</h2>
+                                <p>조별 녹음 실습</p>
+                                <p>#MW미디어아카데미</p>
+                            </div>
+                            <div class="rboxslide">
+                                <img src="img/0013.png" alt="">
+                                <h2>[기술교육]</h2>
+                                <p>오디오 믹서 사용방법</p>
+                                <p>#MW미디어아카데미</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mwtvinfo">
+
+                </div>
+
+                <div class="mwdonate">
+                    <h1 class="hidden">후원과 봉사 안내</h1>
+                    <div class="mwdl">
+                        <i><img src="img/0020.png" alt="후원안내"></i><span>후원안내</span>
+                        <p>MWTV는 여러분의 후원으로 운영됩니다.</p>
+                    </div>
+                    <div class="mwdr">
+                        <i><img src="img/0021.png" alt="봉사안내"></i><span>봉사안내</span>
+                        <p>MWTV는 여러분의 봉사로써 운영됩니다.</p>
+                    </div>
+                </div>
+
+                <div class="mwmail">
+                    <h1 class="hidden">메일구독 신청하기</h1>
+                    <div class="inbox">
+                        <div class="inboxl">
+                            <i><img src="img/0022.png" alt="메일구독"></i>
+                            <span>뉴스구독</span>
+                        </div>
+                        <div class="inboxr">
+                            <div class="long">
+                                <p>이메일 주소를 입력해 주세요.</p>
+                            </div>
+                            <div class="short">
+                                <h2>신청하기</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="footer">
+            <div class="inner">
+                <div class="upfooter">
+                    <div>
+                        <div class="bwlogo"><img src="img/Logobw.png" alt="bwlogo"></div>
+                        <ul class="sns">
+                            <li><img src="img/facebook_1.png" alt="페이스북"></li>
+                            <li><img src="img/instagram_1.png" alt="인스타그램"></li>
+                            <li><img src="img/kakaoCh.png" alt="카톡채널"></li>
+                            <li><img src="img/naver_1.png" alt="네이버블로그"></li>
+                            <li><img src="img/youtube_1.png" alt="유튜브"></li>
+
+                        </ul>
+                    </div>
+                    <div class="btfooter">
+                        <p>단체명 : 이주민방송 MIGRANT WORLD TV｜사업자번호 : 104-82-60816｜주소 : (07290) 서울특별시 영등포구 도림로 125길 6 (문래동2가 10-6) 2층</p>
+                        <p>대표자 : 정혜실 ｜전화 : 02-776-0416｜Email : mwtv@hanmail.net</p>
+                        <p>이주민방송｜등록번호 : 서울 아03856｜등록일자 : 2015년 8월 12일｜제호 : MWTV 이주민방송｜발행인 : 정혜실｜편집인 : 정혜실</p>
+                        <p>청소년보호책임자 : 야마다 다까꼬｜발행소 : 서울시 영등포구 도림로 125길 6, 2층｜발행일자 : 2018년 1월 12일｜청소년보호정책 담당자 : 야마다 다까꼬</p>
+                        <p>후원계좌 (Donate to Migrant Channel) : 신협 131-020-053198 (이주민방송)</p>
+                        <p>Copyright ⓒ Migrant Channel Rights Reserved.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

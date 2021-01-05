@@ -1,0 +1,165 @@
+* {margin: 0; padding: 0}
+ul {list-style: none}
+.inner {width: 1200px; margin: 0 auto;}
+.hidden {display: none}
+.body {font-size: 10px; width: 100%; height: auto; }
+a {text-decoration: none;color:inherit}
+/* 헤더 쪽 상단 */
+#header {width: 100%; height: 150px; background-color:#fff;position: fixed;  top:0; left: 0; right: 0;z-index: 2}
+.up_head {width: 100%; height: 50px; background: #fff}
+#header > .inner {position: relative}
+.logo {position: absolute; left:50%; transform: translate(-50%); top:30px;}
+.login {position: absolute; right: 0; font-size: 1rem}
+.login > li {float: left; margin-right: 15px}
+.login > li:last-child {margin-right: 0}
+.login:after {clear: both; display: block; content: ""}
+
+/*헤더 쪽 하단 */
+/* 드롭다운 메뉴 */
+
+navi{margin-bottom:100px; width: 1000px;z-index: 2}
+        .navi .inner{position: relative;}
+        .navi .depth1{position: absolute;width:100%;top:50px;left:0;}
+        .navi .depth1 >li {float:left;width:12%;background-color:#fff;}
+.navi .depth1 >li:nth-child(5) > ul > li:nth-child(3) {letter-spacing: -2px}
+.navi .depth1 >li:nth-child(5) > ul > li:nth-child(7) {letter-spacing: -2px}
+        .navi .depth1 >li:nth-child(4) {width: 20%}
+        .navi .depth1 >li:nth-child(8) {width: 3%}
+        .navi .depth1 >li:nth-child(8) img {width: 40%; vertical-align: top;}
+        .navi .depth1 >li:nth-child(9) {width: 3%}
+        .navi .depth1 >li:nth-child(9) img {width: 40%; vertical-align: top;}
+
+.navi .depth1 >li > a{display: block;text-align: center;background-color:inherit;color:#333;font-size: 1.1rem;font-weight: bold;padding:10px 0;line-height: 1em;}
+        .navi .depth1 >li > a:hover {color: red;}
+        .navi .depth1 >li> ul {font-size:0.9rem;line-height: 1.1em;box-sizing: border-box;}
+        .navi .depth1 >li> ul:before{content: '';display: block;height:30px;}
+        
+        .navi .depth1 .depth2 ul{padding-top:1em;font-size:0.8rem}
+
+    /* 네비1 */ 
+         #nav1 .depth1 ul {height:0; overflow: hidden;transition: height 1s, opacity 1s;opacity: 0;padding:0 10px; }
+        #nav1 .depth1 >li:hover ul{height:90px; ;opacity: 1;}
+#nav1 .depth1 >li:nth-child(5):hover ul {height: 220px; opacity: 1}
+        #nav1 .depth1 > li > ul li {padding-left: 25px;padding-bottom: 10px; font-size: 13px}
+#nav1 .depth1 > li:nth-child(2) > ul li {padding-left: 10px}
+#nav1 .depth1 > li:nth-child(3) > ul li {padding-left: 10px}
+
+        .depth1 > li > ul > li > a:hover {color: red;}
+  
+  
+
+/* 메인이미지 슬라이드 이동 */
+#mainimg {width:100%; height: 465px; background-image: url(../img/bgimg.jpg); background-position: 40%;}
+#mainimg > .inner {width: 1200px; height: 465px; position: relative}
+#mainimg > .inner > span {display: block; box-sizing: border-box; position: absolute; right: 3%; top: 40%}
+#mainimg > .inner > span> iframe {width: 530px; height: 300px; border-radius: 15px; border: 2px solid #fff}
+.mitxt {width: 500px; height: 300px; position: absolute; top: 40%; left: 0; color: #fff}
+.mitxt > h1 {font-size: 2rem; padding-top: 20px}
+.mitxt > p {font-size: .8rem; }
+#mainimg > .inner >.btn {position: absolute; top: 79%; left: 0;}
+
+
+/* 비디오 클립채널 */
+/* 공통 부분 */
+
+.topsbttl h2 {font-size: 1.6rem; font-weight: bolder; color: black !important}
+.topsbttl > div:nth-child(1) {float: left}
+.topsbttl > div:nth-child(2) {float: right}
+.topsbttl:after {clear: both; display: block; content: ""}
+.topsbttl{margin-bottom: 20px; }
+.slideboxset:after{clear: both; display: block; content: ""}
+.slidebox {float: left; width: 228px; height: 225px; margin-right: 5px;}
+.slidebox > div {width: 200px; padding-left: 10px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.slidebox > img {border: 1px solid black}
+.slidebox:nth-child(5) {margin-right: 0}
+.sltheme {font-size: 1.4rem; font-weight: bolder;}
+.sltxt {font-size: 1.1rem;}
+.tag {font-size: .7rem;}
+/* 뉴스 채널 */
+.vclip01 {margin: 30px 0 40px 0;width:100%; height: 258px;}
+/* 라디오 채널 */
+.vclip02 {margin: 30px 0 40px 0;width:100%; height: 258px;}
+.vclip02 > .slideboxset > .slidebox h2 {word-spacing: 1px; letter-spacing: -4px}
+
+/* 이주민 영화제 */
+.mwffbox {width: 100%; height: 480px; margin: 30px 0 40px 0}
+.boxset{width: 100%; height: 400px}
+.bsleft {width: 640px; height: 400px; float:left; position: relative; background: url(../img/0001.png), linear-gradient(to bottom, white 20%, blue 80%); background-position: center bottom; background-repeat: no-repeat;}
+
+.bsleft:before {display: block; width: 10px; height: 400px; content: ""; position: absolute; left: 106%; border-radius: 100%; background-color: blue}
+
+.bsright {width: 478px; height: 400px; float: right;}
+.rightup {width: 458px; height: 150px; margin-bottom: 50px; border: 1px solid black; border-radius: 15px 0 0 0; position: relative; padding-left: 20px}
+.rightbtm {width 458px; height: 150px; margin-bottom: 50px; border: 1px solid black; border-radius: 15px 0 0 0; position: relative; padding-left: 20px}
+.btn {width: 225px; height: 60px; background-color: blue; line-height: 60px; text-align: center; color:#fff; position: absolute; font-size: 1.1rem; font-weight: bolder; }
+.bsleft > .btn {left: 0; right:0; margin: 0 auto; bottom: 10%;}
+.rightup > .btn {right:0; bottom: 0; border-radius: 15px 0 0 0}
+.rightbtm > .btn {right:0; bottom: 0; border-radius: 15px 0 0 0}
+
+/* 공지사항 */
+.mwsnews {width: 100%; height: 50px; line-height: 50px; font-size: 1.3rem; border: 1px solid black; margin: 30px 0 40px 0;}
+.mwsnews > span {display: block; float: left; margin-right: 50px}
+.mwsnews > span:nth-child(2) {margin-left: 20px}
+.mwsnews > span:nth-child(3) {color:blue; font-weight: bold}
+.mwsnews > span:nth-child(4) {margin-right: 500px}
+.mwsnews > span:last-child {margin-right: 0; font-size: 1.1rem}
+.mwsnews:after {clear: both; display: block; content: ""}
+
+/* 미디어 아카데미 */
+.mwacdmy {width: 100%; height: 460px; margin: 30px 0 40px 0;}
+.acdlbox {width:387px; height: 340px;float: left; background: url(../img/0009.png), linear-gradient(to bottom, white 10%, blue);background-size: 100%; background-position: center bottom; background-repeat: no-repeat}
+.mwacdmy > .topsbttl {}
+.acdrbox {width:785px; height: 300px;float: right;}
+.rboxslide {float: left; width: 185px; margin-right: 15px;}
+.rboxslide:last-child {margin-right: 0}
+.rboxslide > img {border: 1px solid white; 100%}
+.rboxslide > p:last-child{ font-size: .8rem}
+
+/* MWTV 후원안내 */
+.mwdonate {width: 100%; height: 120px; line-height: 120px; margin: 30px 0 40px 0;}
+.mwdonate:after {clear: both; display: block; content""}
+.mwdl {float: left; width: 590px; height: 120px;}
+.mwdl > i {display: inline-block;}
+.mwdl > i > img {width: 100%; vertical-align: middle}
+.mwdl > span {display: inline-block; font-size: 2rem; font-weight: bold; margin: 0 20px;}
+.mwdl > p {display: inline-block; font-size: 1rem;margin-left: 30px}
+
+.mwdr:before {display: block; width: 10px; height: 120px; content: ""; position: absolute;top:0 ;left: -5%; border-radius: 100%; background-color: blue}
+
+.mwdr {float: right; width: 590px; height: 120px; position: relative}
+.mwdr > i {display: inline-block;}
+.mwdr > i > img {width: 100%; vertical-align: middle}
+.mwdr > span {display: inline-block; font-size: 2rem; font-weight: bold; margin: 0 20px;}
+.mwdr > p {display: inline-block; font-size: 1rem;margin-left: 30px}
+
+/* 메일 구독 신청하기 */
+.mwmail {width: 100%; height: 80px; margin: 30px 0 40px 0; padding: 40px 0}
+.mwmail > .inbox {width: 990px; height: 80px; margin: 0 auto; line-height: 80px}
+
+.inboxl {float: left; width: 185px; margin-right: 20px}
+.inboxl > img {vertical-align: middle; widows: 100%}
+.inboxl > span {display: inline-block; font-size: 2rem; font-weight: bolder}
+.inboxr {float: left; width: 785px;}
+.inboxr > .long {float:left; width: 574px; height: 80px; border: 1px solid black; border-radius: 20px 0 0 20px}
+.long > p {font-size: 1.4rem; margin-left: 5%}
+.inboxr > .short {float:left; width: 204px; height: 80px; border: 1px solid blue; background-color: blue ;border-radius: 0 20px 20px 0}
+.short > h2 {color:#fff; text-align: center; font-weight: bolder; font-size: 1.6rem}
+.inboxr:after {clear: both; display: block; content: ""}
+
+#contents > .inner:after {clear: both; display: block; content: ""}
+
+/* 풋터 상단 */
+#footer {width: 100%; height: 200px; background-color: azure}
+.upfooter {width: 100%; height: 50px; line-height: 50px}
+.bwlogo {float: left}
+.sns {float: right}
+.sns > li {float: left}
+.upfooter > div:after {clear: both; display: block; content: ""}
+
+/* 풋터 하단 */
+.btfooter {width: 100%; height: 150px; line-height: 22px; font-size: 1rem}
+
+
+/* 서브 페이지 --- 이주민 라디오 MWFM --- */
+.topsbttl > div > span a.local {background:#25aae1; color:#fff; display: inline; font-weight: bold;margin-right: 5px}
+
